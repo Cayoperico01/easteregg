@@ -1,11 +1,13 @@
 const form = document.getElementById("formulaire");
+
 form.addEventListener("submit", function (event) {
     event.preventDefault(); // Empêche le rechargement de la page
 
     // Récupère les données du formulaire
     const nom = document.getElementById("nom").value;
     const prenom = document.getElementById("prenom").value;
-    const age = document.getElementById("age").value;
+    const ageRp = document.getElementById("age-rp").value;  // Récupère l'âge RP
+    const ageHrp = document.getElementById("age-hrp").value; // Récupère l'âge HRP
     const num = document.getElementById("num").value;
     const motivation = document.getElementById("motivation").value;
     const disponibilites = document.getElementById("disponibilites").value;
@@ -22,19 +24,30 @@ form.addEventListener("submit", function (event) {
             "color": 3066993, // Vert militaire
             "fields": [
                 {
-                    "name": "Nom",
-                    "value": nom,
+                    "name": "Âge (RP)",
+                    "value": ageRp,  // Utilise l'âge RP
                     "inline": true
                 },
                 {
-                    "name": "Prénom",
-                    "value": prenom,
+                    "name": "Âge (HRP)",
+                    "value": ageHrp, // Utilise l'âge HRP
                     "inline": true
                 },
                 {
                     "name": "Numéro",
                     "value": num,
                     "inline": true
+                },
+                // Le reste des champs en dessous
+                {
+                    "name": "Nom",
+                    "value": nom,
+                    "inline": false
+                },
+                {
+                    "name": "Prénom",
+                    "value": prenom,
+                    "inline": false
                 },
                 {
                     "name": "Motivation",
@@ -64,12 +77,6 @@ form.addEventListener("submit", function (event) {
                 {
                     "name": "Consentement pour collecte des données",
                     "value": consent,
-                    "inline": true
-                },
-                // Ajout de l'âge dans la section RP
-                {
-                    "name": "Âge (RP)",
-                    "value": age,
                     "inline": true
                 }
             ]
