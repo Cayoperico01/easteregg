@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Challenge Cayo Perico</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Candidature - Cayo Perico</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Bienvenue dans le Challenge Cayo Perico</h1>
-    <p>Réussissez à trouver le code secret et entrez dans le site caché !</p>
-  </header>
+    <div class="container">
+        <h1>Candidature - Cayo Perico</h1>
+        <form id="formulaire">
+            <h2>----HRP----</h2>
+            <label for="age">Âge :</label>
+            <input type="number" id="age" name="age" required>
 
-  <main>
-    <section id="puzzle">
-      <h2>Indice :</h2>
-      <p>Voici votre premier indice : <em>"Ce que vous cherchez est plus proche que vous ne le pensez. Regardez bien les détails."</em></p>
-      <form id="code-form">
-        <label for="code">Entrez le code :</label>
-        <input type="text" id="code" name="code" required>
-        <button type="submit">Entrer</button>
-      </form>
-    </section>
+            <h2>----RP----</h2>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
 
-    <section id="message" style="display:none;">
-      <h2>Félicitations ! Vous avez trouvé le code !</h2>
-      <p>Maintenant, vous pouvez entrer dans le site secret.</p>
-      <a href="page-secrete.html">Accéder au site secret</a>
-    </section>
-  </main>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
 
-  <footer>
-    <p>© 2024 Cayo Perico Challenge</p>
-  </footer>
+            <label for="num">Numéro :</label>
+            <input type="text" id="num" name="num" required>
 
-  <script src="script.js"></script>
+            <label for="motivation">Motivation de rejoindre notre groupe :</label>
+            <textarea id="motivation" name="motivation" rows="4" required></textarea>
+
+            <label for="disponibilites">Disponibilités :</label>
+            <textarea id="disponibilites" name="disponibilites" rows="4" required></textarea>
+
+            <label for="pourquoi">Pourquoi tu devrais nous rejoindre et pas quelqu’un d’autre :</label>
+            <textarea id="pourquoi" name="pourquoi" rows="4" required></textarea>
+
+            <label for="qualites">Qualités :</label>
+            <textarea id="qualites" name="qualites" rows="4" required></textarea>
+
+            <label for="defauts">Défauts :</label>
+            <textarea id="defauts" name="defauts" rows="4" required></textarea>
+
+            <div id="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">J'accepte la collecte de mes données personnelles</label>
+            </div>
+
+            <button type="submit">Envoyer la candidature</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
