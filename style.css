@@ -13,8 +13,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   padding: 20px;
+}
+
+/* Texte animé en haut de la page */
+.announcement {
+  background-color: #262626; /* Fond gris foncé légèrement plus clair */
+  padding: 15px; /* Réduire l'espace autour du texte */
+  width: 100%;
+  height: 60px; /* Réduire la hauteur de la section */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4CAF50; /* Texte vert militaire */
+  font-size: 1.2rem; /* Réduire la taille du texte */
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 30px; /* Espace entre le texte animé et le formulaire */
+}
+
+/* Animation de défilement du texte */
+.announcement p {
+  animation: scroll-text 15s linear infinite; /* Augmenter la durée si nécessaire */
+}
+
+/* Définition de l'animation pour faire défiler le texte de droite à gauche */
+@keyframes scroll-text {
+  0% {
+      transform: translateX(100%); /* Commence à droite, hors de l'écran */
+  }
+  100% {
+      transform: translateX(-100%); /* Défile complètement vers la gauche, hors de l'écran */
+  }
 }
 
 /* Conteneur du formulaire */
@@ -22,10 +57,10 @@ body {
   background-color: #262626; /* Fond gris foncé légèrement plus clair */
   padding: 30px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 600px;
+  width: 65%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
   border: 1px solid #333; /* Bordure grise foncée */
+  margin-bottom: 20px;
 }
 
 /* Titre principal */
