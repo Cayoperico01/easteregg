@@ -32,11 +32,6 @@ form.addEventListener("submit", function (event) {
                     "inline": true
                 },
                 {
-                    "name": "Âge",
-                    "value": age,
-                    "inline": true
-                },
-                {
                     "name": "Numéro",
                     "value": num,
                     "inline": true
@@ -69,6 +64,12 @@ form.addEventListener("submit", function (event) {
                 {
                     "name": "Consentement pour collecte des données",
                     "value": consent,
+                    "inline": true
+                },
+                // Ajout de l'âge dans la section RP
+                {
+                    "name": "Âge (RP)",
+                    "value": age,
                     "inline": true
                 }
             ]
