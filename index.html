@@ -3,61 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de Candidature - Cayo Perico</title>
-    <link rel="stylesheet" href="style.css">
+    <title>FiveM Store | Packs & Mappings</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Texte animé en haut de la page -->
-    <div class="announcement">
-        <p>Les recrutements pour l'organisation de Cayo Perico sont ouverts ! Rejoignez-nous maintenant !</p>
-    </div>
+    <header class="navbar">
+        <div class="logo">FiveM Store</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#products">Produits</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Conteneur principal pour le formulaire -->
-    <div class="container">
-        <h1>Candidature - Cayo Perico</h1>
-        <form id="formulaire">
-            <!-- Section HRP -->
-            <h2>----HRP----</h2>
-            <label for="age-hrp">Âge (HRP) :</label>
-            <input type="number" id="age-hrp" name="age-hrp" required>
+    <section id="home" class="hero">
+        <h1>Bienvenue sur FiveM Store</h1>
+        <p>Découvrez nos packs graphiques et mappings premium pour votre serveur FiveM.</p>
+        <a href="#products" class="cta">Explorer</a>
+    </section>
 
-            <!-- Section RP -->
-            <h2>----RP----</h2>
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
-
-            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" required>
-
-            <label for="age-rp">Âge (RP) :</label>
-            <input type="number" id="age-rp" name="age-rp" required>
-
-            <label for="num">Numéro :</label>
-            <input type="text" id="num" name="num" required>
-
-            <label for="motivation">Motivation de rejoindre notre groupe :</label>
-            <textarea id="motivation" name="motivation" rows="4" required></textarea>
-
-            <label for="disponibilites">Disponibilités :</label>
-            <textarea id="disponibilites" name="disponibilites" rows="4" required></textarea>
-
-            <label for="pourquoi">Pourquoi tu devrais nous rejoindre et pas quelqu’un d’autre :</label>
-            <textarea id="pourquoi" name="pourquoi" rows="4" required></textarea>
-
-            <label for="qualites">Qualités :</label>
-            <textarea id="qualites" name="qualites" rows="4" required></textarea>
-
-            <label for="defauts">Défauts :</label>
-            <textarea id="defauts" name="defauts" rows="4" required></textarea>
-
-            <div id="consent">
-                <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">J'accepte la collecte de mes données personnelles</label>
+    <section id="products" class="products">
+        <h2>Nos Produits</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="pack1.jpg" alt="Pack graphique 1">
+                <h3>Pack Graphique #1</h3>
+                <p>Améliorez votre expérience visuelle dès maintenant.</p>
+                <button>Acheter</button>
             </div>
+            <div class="product">
+                <img src="map1.jpg" alt="Mapping Ville">
+                <h3>Mapping Ville</h3>
+                <p>Transformez votre serveur avec ce mapping unique.</p>
+                <button>Acheter</button>
+            </div>
+        </div>
+    </section>
 
-            <button type="submit">Envoyer la candidature</button>
+    <section id="about" class="about">
+        <h2>À propos</h2>
+        <p>Nous créons des packs graphiques et mappings sur mesure pour les serveurs FiveM.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <form action="submit.php" method="post">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message"></textarea>
+            <button type="submit">Envoyer</button>
         </form>
-    </div>
-    <script src="script.js"></script>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FiveM Store. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
