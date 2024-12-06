@@ -15,6 +15,7 @@
                 <li><a href="#products">Produits</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="cart-button">Voir le Panier</button></li>
             </ul>
         </nav>
     </header>
@@ -29,23 +30,23 @@
         <h2>Nos Produits</h2>
         <div class="product-grid">
             <div class="product">
-                <img src="pack1.jpg" alt="Pack graphique 1">
+                <img src="pack1.jpg" alt="Pack Graphique 1">
                 <h3>Pack Graphique #1</h3>
-                <p>Améliorez votre expérience visuelle dès maintenant.</p>
-                <button>Acheter</button>
+                <p>Améliorez votre expérience visuelle dès maintenant à partir de 19,99€</p>
+                <button class="add-to-cart" data-name="Pack Graphique #1" data-price="19.99">Ajouter au Panier</button>
             </div>
             <div class="product">
                 <img src="map1.jpg" alt="Mapping Ville">
                 <h3>Mapping Ville</h3>
-                <p>Transformez votre serveur avec ce mapping unique.</p>
-                <button>Acheter</button>
+                <p>Transformez votre serveur avec ce mapping unique à partir de 29,99€</p>
+                <button class="add-to-cart" data-name="Mapping Ville" data-price="29.99">Ajouter au Panier</button>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <h2>À propos</h2>
-        <p>Nous créons des packs graphiques et mappings sur mesure pour les serveurs FiveM.</p>
+        <p>Nous créons des packs graphiques et des mappings sur mesure pour les serveurs FiveM afin d'améliorer l'expérience des joueurs et des administrateurs.</p>
     </section>
 
     <section id="contact" class="contact">
@@ -58,8 +59,19 @@
         </form>
     </section>
 
+    <!-- Panier -->
+    <div id="cart-container" class="cart-container">
+        <h2>Votre Panier</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total">Total: 0€</div>
+        <button id="checkout-button">Passer à la caisse</button>
+        <button onclick="toggleCart()">Fermer</button>
+    </div>
+
     <footer>
         <p>&copy; 2024 FiveM Store. Tous droits réservés.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
